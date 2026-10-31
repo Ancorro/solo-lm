@@ -10,3 +10,5 @@
 - Cloned nanochat master (2026-07-03 commit) to /nfs/hpc/share/cleasbys/minilm/nanochat. Submitted CPU setup job: uv venv (torch 2.9.1, CUDA 12.8), 300 ClimbMix shards, tokenizer training (32768 vocab).
 - Steven: keep the base (non-instruct) weights in persistent storage. Base checkpoints are written to /nfs/hpc/share/cleasbys/minilm/base/base_checkpoints (shared disk, persistent) and each finished base model is uploaded to a private Hugging Face repo, Ancorro/solo-lm-base, as an off-cluster copy.
 - Submitted 1-GPU smoke test (d12, 60 steps, FP8, save at 30, then resume from 30), queued after setup.
+- Setup job finished: torch 2.9.1+cu128 venv, 301 ClimbMix shards (26 GB), tokenizer with 32,768 tokens trained. nanochat's d24 leaderboard run used ~170 shards, so 300 covers d24/d26.
+- Smoke test is pending behind 1-GPU jobs (priority). 8-GPU probe still estimated 2026-11-01 09:59.
