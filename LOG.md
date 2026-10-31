@@ -8,3 +8,5 @@
 - Shared storage: 339 GB free of 1.5 TB, no per-user quota. Tokenized data for ~38B tokens should fit.
 - Decision: ~1B class, nanochat d24/d26 (the size of the leaderboard runs). More compute goes to RL variants.
 - Cloned nanochat master (2026-07-03 commit) to the cluster's shared disk. Submitted CPU setup job: uv venv (torch 2.9.1, CUDA 12.8), 300 ClimbMix shards, tokenizer training (32768 vocab).
+- Decision: keep the base (non-instruct) weights in persistent storage. Base checkpoints are written to the cluster's shared disk (persistent) and each finished base model is uploaded to a private Hugging Face repo, Ancorro/solo-lm-base, as an off-cluster copy.
+- Submitted 1-GPU smoke test (d12, 60 steps, FP8, save at 30, then resume from 30), queued after setup.
