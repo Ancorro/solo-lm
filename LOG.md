@@ -12,3 +12,7 @@
 - Submitted 1-GPU smoke test (d12, 60 steps, FP8, save at 30, then resume from 30), queued after setup.
 - Setup job finished: torch 2.9.1+cu128 venv, 301 ClimbMix shards (26 GB), tokenizer with 32,768 tokens trained. nanochat's d24 leaderboard run used ~170 shards, so 300 covers d24/d26.
 - Smoke test is pending behind 1-GPU jobs (priority). 8-GPU probe still estimated 2026-11-01 09:59.
+
+## 2026-11-08
+- Paused 11-01 to 11-08; no pretraining submitted. HPC refuses an 8-GPU 48 h job (`MaxGRESRunMinsPerUser`). 4 x H100 estimated start 11-14; preemptible 4 x H200 11-09.
+- Decision: smaller jobs on smaller GPUs, so the HPC stays usable for other work. The A40 partition (2-GPU per-job cap) starts now. Submitted 2 x A40 d24 throughput probe.
