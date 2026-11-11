@@ -11,7 +11,7 @@ Dated log: [LOG.md](LOG.md).
 ## Sources and attribution
 
 - [nanochat](https://github.com/karpathy/nanochat), Andrej Karpathy: training code and recipe (d24/d26), and the d32 comparison point ([discussion 8](https://github.com/karpathy/nanochat/discussions/8), [leaderboard](https://github.com/karpathy/nanochat/blob/master/dev/LEADERBOARD.md)).
-- [ClimbMix](https://huggingface.co/datasets/nvidia/ClimbMix), NVIDIA: pretraining data.
+- ClimbMix, NVIDIA: pretraining data, downloaded by nanochat from the shuffled copy [karpathy/climbmix-400b-shuffle](https://huggingface.co/datasets/karpathy/climbmix-400b-shuffle).
 - [SPIRAL](https://arxiv.org/abs/2506.24119): multi-agent self-play RL on text games.
 - [DCLM-1B](https://huggingface.co/TRI-ML/DCLM-1B), Toyota Research Institute and the DataComp team: CORE metric and published CORE scores.
 - [SmolLM2](https://arxiv.org/abs/2502.02737), Hugging Face: comparison model.
