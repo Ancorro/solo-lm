@@ -20,3 +20,4 @@
 ## 2026-11-10
 - A40 throughput probe result (ended 11-08 10:13): 1 x A40 d24, no FP8, 17.7k tok/s, 56.6% bf16 MFU (model FLOPs utilization), 59 s/step, peak memory 37.6 GB. 2 x A40 torchrun hung on the first all-reduce (NCCL, NVIDIA Collective Communications Library) and timed out after 10 min; same failure as the first probe. No pretraining job running or queued.
 - 2-GPU test on another A40 node: NCCL all-reduce passes with default settings, and a 3-step d24 run on 2 x A40 reaches 34.8k tok/s (55.6% MFU, peak 42.2 GB per GPU), twice the 1-GPU rate. The earlier hang is tied to the node it ran on; a test pinned to that node is queued.
+- Correction to 10-31: the shared disk does have a quota on this project's space, 1.5 TB soft and 2 TB hard. 1.38 TB is used across all projects, so about 121 GB is left before the soft limit. One d24 checkpoint is about 15 GB on 2 GPUs (4.0 GB weights, 5.5 GB optimizer state per GPU).
