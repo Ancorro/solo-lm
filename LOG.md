@@ -19,3 +19,4 @@
 
 ## 2026-11-10
 - A40 throughput probe result (ended 11-08 10:13): 1 x A40 d24, no FP8, 17.7k tok/s, 56.6% bf16 MFU (model FLOPs utilization), 59 s/step, peak memory 37.6 GB. 2 x A40 torchrun hung on the first all-reduce (NCCL, NVIDIA Collective Communications Library) and timed out after 10 min; same failure as the first probe. No pretraining job running or queued.
+- 2-GPU test on another A40 node: NCCL all-reduce passes with default settings, and a 3-step d24 run on 2 x A40 reaches 34.8k tok/s (55.6% MFU, peak 42.2 GB per GPU), twice the 1-GPU rate. The earlier hang is tied to the node it ran on; a test pinned to that node is queued.
