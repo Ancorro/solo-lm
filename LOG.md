@@ -16,3 +16,6 @@
 ## 2026-11-08
 - Paused 11-01 to 11-08; no pretraining submitted. HPC refuses an 8-GPU 48 h job (`MaxGRESRunMinsPerUser`). 4 x H100 estimated start 11-14; preemptible 4 x H200 11-09.
 - Decision: smaller jobs on smaller GPUs, so the HPC stays usable for other work. The A40 partition (2-GPU per-job cap) starts now. Submitted 2 x A40 d24 throughput probe.
+
+## 2026-11-10
+- A40 throughput probe result (ended 11-08 10:13): 1 x A40 d24, no FP8, 17.7k tok/s, 56.6% bf16 MFU (model FLOPs utilization), 59 s/step, peak memory 37.6 GB. 2 x A40 torchrun hung on the first all-reduce (NCCL, NVIDIA Collective Communications Library) and timed out after 10 min; same failure as the first probe. No pretraining job running or queued.
