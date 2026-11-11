@@ -3,3 +3,10 @@ private/
 __pycache__/
 *.pt
 wandb/
+.env
+.env.*
+!.env.example
+node_modules/
+venv/
+build/
+dist/
